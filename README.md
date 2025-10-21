@@ -136,10 +136,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Developed for GIS and CAD integration workflows
 - Thanks to the ArcGIS Python community for geometry handling best practices
 
-## Contact
+## Author
 
-Christopher Pickett - 10 / 20 / 2025
-Project Link: [https://github.com/cpickett101/arcgis-cad-scale-factor-tool](https://github.com/cpickett101/arcgis-cad-scale-factor-tool)
+- GitHub: [@cpickett101](https://github.com/cpickett101)
+- Email: christopherbpickett@gmail.com
+- LinkedIn: [LinkedIn](hhttps://www.linkedin.com/in/christopher-p-a4908979/)
 
 ## Version History
 
