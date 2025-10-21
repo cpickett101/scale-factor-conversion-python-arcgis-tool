@@ -6,6 +6,23 @@ An ArcGIS Python Toolbox for converting between GIS grid coordinates and CAD/rea
 ![ArcGIS Pro](https://img.shields.io/badge/ArcGIS%20Pro-3.x-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## Screenshots
+
+![Tool Interface](images/tool-interface.png)
+*The Scale Factor tool interface in ArcGIS Pro*
+
+### Point Conversion
+![Point Conversion Demo](images/point-conversion.gif)
+*Scaling point features while preserving coordinates*
+
+### Line Conversion
+![Line Conversion Demo](images/line-conversion.gif)
+*Scaling polyline features with curve preservation*
+
+### Polygon Conversion
+![Polygon Conversion Demo](images/polygon-conversion.gif)
+*Scaling polygon features maintaining boundary integrity*
+
 ## Overview
 
 This tool applies scale factors to GIS feature classes, commonly needed when converting between State Plane coordinate systems and ground/surface measurements used in CAD systems. The tool intelligently preserves circular arcs and bezier curves from CAD imports instead of converting them to straight line segments.
@@ -22,7 +39,7 @@ This tool applies scale factors to GIS feature classes, commonly needed when con
 
 - **ArcGIS Pro 3.x** or later
 - **Python 3.x** (included with ArcGIS Pro)
-- **Note:** Most operations work with a Basic license. An Advanced license may be required for certain specialized geometry operations or when working with enterprise geodatabase features.
+- **Advanced ArcGIS license** (for certain geometry operations)
 
 ## Installation
 
