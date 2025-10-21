@@ -9,18 +9,19 @@ An ArcGIS Python Toolbox for converting between GIS grid coordinates and CAD/rea
 ## Screenshots
 
 ![Tool Interface](images/tool-interface.png)
+
 *The Scale Factor tool interface in ArcGIS Pro*
 
 ### Point Conversion
-![Point Conversion Demo](images/point-conversion.gif)
+![Point Conversion Demo](images/demo_point.gif)
 *Scaling point features while preserving coordinates*
 
 ### Line Conversion
-![Line Conversion Demo](images/line-conversion.gif)
+![Line Conversion Demo](images/demo_line.gif)
 *Scaling polyline features with curve preservation*
 
 ### Polygon Conversion
-![Polygon Conversion Demo](images/polygon-conversion.gif)
+![Polygon Conversion Demo](images/demo_polygon.gif)
 *Scaling polygon features maintaining boundary integrity*
 
 ## Overview
