@@ -2,6 +2,10 @@
 
 An ArcGIS Python Toolbox for converting between GIS grid coordinates and CAD/real-world surface measurements while preserving true curve geometry.
 
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![ArcGIS Pro](https://img.shields.io/badge/ArcGIS%20Pro-3.x-green.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 ## Overview
 
 This tool applies scale factors to GIS feature classes, commonly needed when converting between State Plane coordinate systems and ground/surface measurements used in CAD systems. The tool intelligently preserves circular arcs and bezier curves from CAD imports instead of converting them to straight line segments.
@@ -16,24 +20,25 @@ This tool applies scale factors to GIS feature classes, commonly needed when con
 
 ## Requirements
 
-- ArcGIS Pro 3.x or later
-- Python (included with ArcGIS)
-- Advanced ArcGIS license (for certain geometry operations)
+- **ArcGIS Pro 3.x** or later
+- **Python 3.x** (included with ArcGIS Pro)
+- **Advanced ArcGIS license** (for certain geometry operations)
 
 ## Installation
 
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/yourusername/gis-cad-scale-factor.git
-   ```
+### Clone the Repository
 
-2. Open ArcGIS Pro
+```bash
+git clone https://github.com/yourusername/gis-cad-scale-factor.git
+```
 
-3. Add the toolbox to your project:
-   - In the Catalog pane, right-click on **Toolboxes**
-   - Select **Add Toolbox**
-   - Navigate to the downloaded `ScaleFactor.pyt` file
-   - Click **OK**
+### Add to ArcGIS Pro
+
+1. Open ArcGIS Pro
+2. In the Catalog pane, right-click on **Toolboxes**
+3. Select **Add Toolbox**
+4. Navigate to the downloaded `ScaleFactor.pyt` file
+5. Click **OK**
 
 ## Usage
 
@@ -52,11 +57,13 @@ This tool applies scale factors to GIS feature classes, commonly needed when con
 ### Scale Factor Guidelines
 
 #### Grid to Surface (GIS → CAD)
+
 - Use scale factors **greater than 1.0**
 - Example: 1.00012 for Texas Central State Plane
 - Converts from State Plane grid coordinates to ground/surface measurements
 
 #### Surface to Grid (CAD → GIS)
+
 - Use scale factors **less than 1.0**
 - Example: 0.99988 for Texas Central State Plane
 - Converts from ground/surface measurements to State Plane grid coordinates
@@ -64,10 +71,10 @@ This tool applies scale factors to GIS feature classes, commonly needed when con
 ### Common Scale Factors by State Plane Zone
 
 | State Plane Zone | Grid to Surface | Surface to Grid |
-|-----------------|-----------------|-----------------|
-| Texas Central | 1.00012 | 0.99988 |
-| Texas North | 1.00008 | 0.99992 |
-| Texas South | 1.00016 | 0.99984 |
+|------------------|-----------------|-----------------|
+| Texas Central    | 1.00012         | 0.99988         |
+| Texas North      | 1.00008         | 0.99992         |
+| Texas South      | 1.00016         | 0.99984         |
 
 *Note: Scale factors vary by location within each zone. Consult your project's geodetic control for exact values.*
 
@@ -82,7 +89,7 @@ Direction: Surface to Grid (CAD → GIS, factor < 1.0)
 Scale Factor: 0.99988
 ```
 
-Result: All features scaled by 0.99988, with curved geometry preserved.
+**Result:** All features scaled by 0.99988, with curved geometry preserved.
 
 ## Technical Details
 
@@ -103,16 +110,19 @@ The tool uses ArcGIS's JSON geometry representation to detect and preserve true 
 ## Troubleshooting
 
 ### "Scale factor must be greater/less than 1.0" Error
+
 - Check that your scale factor matches the conversion direction
 - Grid to Surface requires factors > 1.0
 - Surface to Grid requires factors < 1.0
 
 ### Curves Not Preserved
+
 - Ensure input data is stored in a File Geodatabase (not shapefile)
 - Shapefiles don't support true curve geometry
 - Use Feature Class to Feature Class tool to convert to FGDB if needed
 
 ### Output Features Not Appearing
+
 - Check that the output path is valid
 - Ensure you have write permissions to the output location
 - Verify the output workspace exists
@@ -140,7 +150,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - GitHub: [@cpickett101](https://github.com/cpickett101)
 - Email: christopherbpickett@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/christopher-p-a4908979/)
+- LinkedIn: [Christopher Pickett](https://www.linkedin.com/in/christopher-p-a4908979/)
+
+## Support
+
+If you encounter any issues or have questions:
+- Open an [issue](https://github.com/cpickett101/gis-cad-scale-factor/issues)
+- Check existing issues for solutions
+- Submit a pull request
 
 ## Version History
 
@@ -149,3 +166,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - Support for curve preservation
   - Bidirectional conversion support
   - Automatic scale factor validation
+
+---
+
+**Note:** This tool requires a File Geodatabase for full curve geometry support. Shapefiles do not support true curves and will convert them to line segments.
