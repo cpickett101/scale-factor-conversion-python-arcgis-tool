@@ -22,7 +22,6 @@ This tool applies scale factors to GIS feature classes, commonly needed when con
 
 - **ArcGIS Pro 3.x** or later
 - **Python 3.x** (included with ArcGIS Pro)
-- **Advanced ArcGIS license** (for certain geometry operations)
 
 ## Installation
 
